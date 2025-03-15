@@ -5,6 +5,7 @@
 {% block title %} Formulario de contactos {% endblock %}
 
 {% block content %}
+  <h2>Formulario de Contacto</h2>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
