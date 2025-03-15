@@ -9,7 +9,7 @@ import smtplib
 from django.conf import settings
 
 def index(request):
-  return HttpResponse("Hola, prueba con aplicacion de UA Day Santo Domingo")
+  return HttpResponse("Bienvenido a UA Day Santo Domingo. Accede al <a href='/contact'>formulario</a> ")
 
 
 def contact_view(request):
