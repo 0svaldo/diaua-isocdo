@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-)7dphhnlgk0qwj9cq(p)jk7cbr5g+3dveadyc=!rafa2$z^cy2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','díaua-do.org','54.226.67.132',]
+ALLOWED_HOSTS = ['127.0.0.1','localhost','díaua-do.org','54.226.67.132','xn--daua-do-7ya.org', ]
 
 # Application definition
 
@@ -89,6 +89,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "proyUA.wsgi.application"
 
+# CSRF
+CSRF_TRUSTED_ORIGINS = [
+    "https://xn--daua-do-7ya.org",
+    "https://díaua-do.org"
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -198,14 +203,6 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # settings.py (Fragmento relevante)
-'''
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Simula el envío
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
-'''
-
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER='osvaldo.larancuent@gmail.com'
